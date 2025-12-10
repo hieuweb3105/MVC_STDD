@@ -6,8 +6,8 @@ if(isset($_POST['logout'])) {
         // huỷ session USER
         unset($_SESSION['user']);
         // huỷ cookie nếu có
-        setcookie('token_remember',$token_remember, [
-            'expires' => time() - 1,
+        setcookie('token_remember','', [
+            'expires' => time() - 3600,
             'path' => '/',
             'domain' => DOMAIN,
             'secure' => true,
